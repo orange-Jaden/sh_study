@@ -14,9 +14,11 @@ pygame.display.set_caption("Jaden IoT")
 # mqtt client, callback 생성 
 def turnOn():
     # To-Do
+    print("Turn on")
 
 def turnOff():
     # To-Do
+    print("Turn off")
 
 # load images
 class Button: 
@@ -50,7 +52,8 @@ on_button_img = pygame.image.load('img/btn_on.png')
 off_button_img = pygame.image.load('img/btn_off.png')
 
 ## create button
-
+button_1 = Button(screen_width // 2, screen_height // 2 - 100, on_button_img, turnOn)
+button_2 = Button(screen_width // 2, screen_height // 2 + 100, on_button_img, turnOff)
 
 run  = True
 while run:
@@ -61,6 +64,8 @@ while run:
             run = False
 
     # draw button
+    button_1.draw()
+    button_2.draw()
 
     pygame.display.update()
 

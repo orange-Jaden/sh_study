@@ -51,6 +51,7 @@ pygame.display.set_caption("Jaden IoT")
 def turnOn():
     print("turn on")
     # LED를 켜기 위해 메시지 전송
+    client.publish('/shk-iot/led', 'on', 1)
 
 def turnOff():
     print("turn off")
